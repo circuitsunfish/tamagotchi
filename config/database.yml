@@ -79,8 +79,12 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+#current database url: internal
+#internal database url postgres://tamagotchi_user:tWfrh1yPOP2lBBKMUUJOwqAbwmNqmRh6@dpg-cdmm5382i3mqrp8prue0-a/tamagotchi
+#external database url postgres://tamagotchi_user:tWfrh1yPOP2lBBKMUUJOwqAbwmNqmRh6@dpg-cdmm5382i3mqrp8prue0-a.oregon-postgres.render.com/tamagotchi
 production:
   <<: *default
   database: tamagotchi_production
   username: tamagotchi
   password: <%= ENV["TAMAGOTCHI_DATABASE_PASSWORD"] %>
+  url: <%= ENV["postgres://tamagotchi_user:tWfrh1yPOP2lBBKMUUJOwqAbwmNqmRh6@dpg-cdmm5382i3mqrp8prue0-a/tamagotchi"] %>
