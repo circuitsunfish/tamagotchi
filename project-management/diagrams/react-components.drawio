@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Z8-dsudKGo-zxtGtscHh" name="Page-1">
-        <mxGraphModel dx="1066" dy="734" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1066" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -55,11 +55,8 @@
                 <mxCell id="19" value="game" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;" vertex="1" parent="1">
                     <mxGeometry x="225" y="610" width="460" height="460" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="canvas" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-                    <mxGeometry x="410" y="690" width="80" height="80" as="geometry"/>
-                </mxCell>
                 <mxCell id="21" value="controls" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-                    <mxGeometry x="250" y="820" width="140" height="130" as="geometry"/>
+                    <mxGeometry x="260" y="907" width="140" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="feed" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="21">
                     <mxGeometry y="26" width="140" height="26" as="geometry"/>
@@ -74,7 +71,7 @@
                     <mxGeometry y="104" width="140" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="navigation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="820" width="140" height="104" as="geometry"/>
+                    <mxGeometry x="510" y="920" width="140" height="104" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="account" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
                     <mxGeometry y="26" width="140" height="26" as="geometry"/>
@@ -87,6 +84,15 @@
                 </mxCell>
                 <mxCell id="30" value="state:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&amp;nbsp;session&lt;/li&gt;&lt;li&gt;tama character&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="234" y="640" width="145" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Container" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="640" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="character status chart" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="65" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="canvas" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="670" width="80" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
