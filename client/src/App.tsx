@@ -25,9 +25,6 @@ function App() {
             <Route path="/testing">
               <h1>Test Route</h1>
             </Route>
-            <Route path="/">
-              <h1>Page Count: {count}</h1>
-            </Route>
             <Route path="/auth">
               <h1>Login</h1>
             </Route>
@@ -36,6 +33,9 @@ function App() {
             </Route>
             <Route path="/play">
               <h1>play</h1>
+            </Route>
+            <Route path="/">
+              <h1>Page Count: {count}</h1>
             </Route>
           </Switch>
         </header>
