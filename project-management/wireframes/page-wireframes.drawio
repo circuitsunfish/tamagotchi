@@ -52,7 +52,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="selectcharacter" id="gKuL_REPHSGoF7BTMRZx">
-        <mxGraphModel dx="1066" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1066" dy="497" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="ZTpu3F2TPfKqRi7D_kwA-0"/>
                 <mxCell id="ZTpu3F2TPfKqRi7D_kwA-1" parent="ZTpu3F2TPfKqRi7D_kwA-0"/>
@@ -74,14 +74,14 @@
                 <mxCell id="i3fK06BKB8DdU-Xzqupd-0" value="hatch new" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ZTpu3F2TPfKqRi7D_kwA-2">
                     <mxGeometry x="310" y="130" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="i3fK06BKB8DdU-Xzqupd-1" value="More Friends!&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;[all tamagotchis you did not hatch]" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="ZTpu3F2TPfKqRi7D_kwA-2">
+                <mxCell id="i3fK06BKB8DdU-Xzqupd-1" value="More Friends!&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;[all tamagotchis you did not hatch]&lt;br&gt;Sort by: longest time since last_accessed" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="ZTpu3F2TPfKqRi7D_kwA-2">
                     <mxGeometry x="35" y="250" width="405" height="220" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="play" id="qMTVvXwKt2VNi_2RuPRK">
-        <mxGraphModel dx="1066" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="525" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="R7CxOSbI79q8FVNvMOcK-0"/>
                 <mxCell id="R7CxOSbI79q8FVNvMOcK-1" parent="R7CxOSbI79q8FVNvMOcK-0"/>
