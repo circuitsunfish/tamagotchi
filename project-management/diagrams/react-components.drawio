@@ -94,7 +94,7 @@
                 <mxCell id="20" value="canvas" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
                     <mxGeometry x="560" y="670" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="35" value="footer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="495" y="90" width="50" height="30" as="geometry"/>
                 </mxCell>
             </root>
