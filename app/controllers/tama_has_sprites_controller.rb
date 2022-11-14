@@ -1,0 +1,2 @@
+class TamaHasSpritesController < ApplicationController
+end

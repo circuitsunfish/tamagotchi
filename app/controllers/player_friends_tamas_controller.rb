@@ -1,0 +1,2 @@
+class PlayerFriendsTamasController < ApplicationController
+end

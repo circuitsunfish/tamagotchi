@@ -1,0 +1,2 @@
+class PlayerOwnsTamasController < ApplicationController
+end

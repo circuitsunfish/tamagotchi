@@ -1,0 +1,2 @@
+class TamaCharacter < ApplicationRecord
+end

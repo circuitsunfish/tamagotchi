@@ -1,0 +1,2 @@
+class TamaCharactersController < ApplicationController
+end
