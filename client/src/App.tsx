@@ -32,7 +32,10 @@ function App() {
               <h1>Login</h1>
             </Route>
             <Route path="/selectcharacter">
-              <h1>Login</h1>
+              <h1>selectcharacter</h1>
+            </Route>
+            <Route path="/play">
+              <h1>play</h1>
             </Route>
           </Switch>
         </header>
