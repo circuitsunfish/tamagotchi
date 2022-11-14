@@ -1,0 +1,2 @@
+class GmResponsesController < ApplicationController
+end
