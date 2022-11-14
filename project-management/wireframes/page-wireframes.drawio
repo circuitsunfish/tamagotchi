@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="UMi7DGz1L9zeTnmEyBkX" name="default page">
+        <mxGraphModel dx="1066" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Tamagotchi Clone" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="115" y="10" width="620" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Footer: Credits, links to socials + github" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry y="500" width="620" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="login / sign up" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="250" y="90" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="there are [total number of tamagotchis] friends waiting for you!" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="213" y="310" width="195" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="sprite from a random tamagotchi" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="250" y="200" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="auth" id="pjnftdqty53KxZOfEi4Q">
+        <mxGraphModel dx="1066" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-0"/>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-1" parent="rXcYYCwnUZDTMQ79JSrv-0"/>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-2" value="Tamagotchi Clone" style="swimlane;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-1">
+                    <mxGeometry x="115" y="10" width="620" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-3" value="Footer: Credits, links to socials + github" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-2">
+                    <mxGeometry y="500" width="620" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-5" value="there are [total number of tamagotchis] friends waiting for you!" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-2">
+                    <mxGeometry x="7.5" y="40" width="472.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-6" value="sprite from a random tamagotchi" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-2">
+                    <mxGeometry x="495" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-7" value="sign up" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-2">
+                    <mxGeometry x="165" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-8" value="login" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-2">
+                    <mxGeometry x="325" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="rXcYYCwnUZDTMQ79JSrv-9" value="form" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="rXcYYCwnUZDTMQ79JSrv-1">
+                    <mxGeometry x="260" y="270" width="320" height="170" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
