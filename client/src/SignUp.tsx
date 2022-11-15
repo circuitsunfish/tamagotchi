@@ -1,14 +1,20 @@
 //https://learning.flatironschool.com/courses/5230/pages/authenticating-users?module_item_id=486270
+import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
+
+type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
 
-import React, { useState } from 'react';
+type SignUpProps = {
+    name: string
+    password: string
+    setUsername: Dispatcher<string>
+    setPassword: Dispatcher<string>
+}
 
 
-// export default function SignUp({ onLogin }: { onLogin: () => {} }) {
-export default function SignUp() {
-    const onLogin = "";
-    const [name, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+
+
+export default function SignUp({ name, setUsername, password, setPassword }: SignUpProps) {
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     //https://www.kindacode.com/article/react-typescript-handling-form-onsubmit-event/
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -24,8 +30,8 @@ export default function SignUp() {
                 password_confirmation: passwordConfirmation,
             }),
         })
-            .then((r) => r.json())
-        // .then(onLogin);
+            .then((response) => response.json())
+            .then(() => { setUsername(name) });
     }
 
     return (

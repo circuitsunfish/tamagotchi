@@ -39,9 +39,17 @@ function App() {
             <Route path="/auth">
               <Login
                 name={name}
+                setUsername={setUsername}
                 password={password}
+                setPassword={setPassword}
               />
-              <SignUp />
+              <SignUp
+                name={name}
+                setUsername={setUsername}
+                password={password}
+                setPassword={setPassword}
+
+              />
               {/* <SignUp onLogin={() => { }} /> */}
             </Route>
             <Route path="/selectcharacter">

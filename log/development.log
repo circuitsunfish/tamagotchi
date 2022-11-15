@@ -4040,3 +4040,213 @@ Processing by ApplicationController#hello_world as */*
 Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 13425)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 13:29:09 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.74ms)
+Completed 200 OK in 10ms (Views: 1.7ms | Allocations: 328)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 13:29:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 13427)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 13:29:57 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 2ms (Views: 0.8ms | Allocations: 330)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 13:53:44 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.68ms)
+Completed 200 OK in 8ms (Views: 4.5ms | Allocations: 321)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:00:52 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 328)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:00:59 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.44ms)
+Completed 200 OK in 3ms (Views: 1.3ms | Allocations: 317)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:00:59 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.53ms)
+Completed 200 OK in 3ms (Views: 1.6ms | Allocations: 316)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:01:03 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 6ms (Views: 1.7ms | Allocations: 320)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:01:05 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 3ms (Views: 0.7ms | Allocations: 322)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:01:06 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.37ms)
+Completed 200 OK in 3ms (Views: 1.4ms | Allocations: 318)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:01:56 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"ashton", "session"=>{"username"=>"ashton"}}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 62ms (Views: 1.0ms | ActiveRecord: 24.0ms | Allocations: 5168)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:03:10 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 4ms (Views: 1.7ms | Allocations: 318)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:03:10 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.96ms)
+Completed 200 OK in 14ms (Views: 5.6ms | Allocations: 318)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:03:14 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "session"=>{"name"=>"ashton"}}
+  [1m[36mPlayer Load (1.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 333ms (Views: 0.4ms | ActiveRecord: 10.4ms | Allocations: 5897)
+
+
+  [1m[36mPlayer Load (4.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:26 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (6.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 201 Created in 315ms (Views: 10.5ms | ActiveRecord: 6.7ms | Allocations: 2456)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:31 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 353ms (Views: 7.0ms | ActiveRecord: 10.5ms | Allocations: 18676)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:06:41 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.48ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:06:41 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:50 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 345ms (Views: 5.5ms | ActiveRecord: 18.7ms | Allocations: 21765)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:52 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 201 Created in 291ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 873)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:53 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 287ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 880)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:54 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:54 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 308ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 5237)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:06:54 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 201 Created in 302ms (Views: 0.4ms | ActiveRecord: 6.3ms | Allocations: 4548)
+
+
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 306ms (Views: 1.5ms | ActiveRecord: 5.7ms | Allocations: 6310)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:08:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 201 Created in 281ms (Views: 5.2ms | ActiveRecord: 5.0ms | Allocations: 33717)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:08:50 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 652)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-15 14:08:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 13446)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-15 14:08:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"ashton", "password"=>"[FILTERED]", "session"=>{"name"=>"ashton", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = $1 LIMIT $2[0m  [["name", "ashton"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 201 Created in 283ms (Views: 4.7ms | ActiveRecord: 9.5ms | Allocations: 33725)
+
+
