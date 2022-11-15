@@ -3,8 +3,7 @@ import { Dispatch, SetStateAction, useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './SignUp';
-import Login from './Login';
+import Auth from './Auth'
 
 function App() {
   //testing stuff
@@ -37,20 +36,12 @@ function App() {
               <h1>Test Route</h1>
             </Route>
             <Route path="/auth">
-              <Login
+              <Auth
                 name={name}
                 setUsername={setUsername}
                 password={password}
                 setPassword={setPassword}
               />
-              <SignUp
-                name={name}
-                setUsername={setUsername}
-                password={password}
-                setPassword={setPassword}
-
-              />
-              {/* <SignUp onLogin={() => { }} /> */}
             </Route>
             <Route path="/selectcharacter">
               <h1>selectcharacter</h1>
