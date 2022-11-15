@@ -1,6 +1,6 @@
 //https://learning.flatironschool.com/courses/5230/pages/authenticating-users?module_item_id=486270
 import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
-
+import { useHistory } from 'react-router-dom';
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
 
@@ -15,6 +15,7 @@ type SignUpProps = {
 
 
 export default function SignUp({ name, setUsername, password, setPassword }: SignUpProps) {
+    const history = useHistory();
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     //https://www.kindacode.com/article/react-typescript-handling-form-onsubmit-event/
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -31,7 +32,10 @@ export default function SignUp({ name, setUsername, password, setPassword }: Sig
             }),
         })
             .then((response) => response.json())
-            .then(() => { setUsername(name) });
+            .then(() => {
+                setUsername(name)
+                history.push("/play")
+            });
     }
 
     return (

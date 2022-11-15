@@ -1,4 +1,6 @@
 import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 //https://stackoverflow.com/questions/56028635/passing-usestate-as-props-in-typescript
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
@@ -10,6 +12,8 @@ type LoginProps = {
 }
 
 export default function Login({ name, setUsername, password, setPassword }: LoginProps) {
+
+    const history = useHistory();
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -24,7 +28,10 @@ export default function Login({ name, setUsername, password, setPassword }: Logi
             }),
         })
             .then((r) => r.json())
-            .then((user) => setUsername(name));
+            .then(() => {
+                setUsername(name)
+                history.push("/play");
+            });
     }
 
     return (
