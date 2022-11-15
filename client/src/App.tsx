@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './Login';
+import SignUp from './SignUp';
 
 function App() {
 
@@ -27,7 +27,6 @@ function App() {
               <h1>Test Route</h1>
             </Route>
             <Route path="/auth">
-              <h1>Login</h1>
               <SignUp />
               {/* <SignUp onLogin={() => { }} /> */}
             </Route>

@@ -11,15 +11,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  Rails.application.routes.draw do
   resources :player_owns_tamas
   resources :player_friends_tamas
   resources :gm_responses
   resources :gm_responses, only: [:index, :show]
+
+
+#auth routes
+post "/signup", to: "users#create"
+post "/login", to: "sessions#create"
+
     # route to test your configuration
     get '/hello', to: 'application#hello_world'
-  end
-
 
 end

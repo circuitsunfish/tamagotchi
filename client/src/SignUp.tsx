@@ -1,10 +1,13 @@
+//https://learning.flatironschool.com/courses/5230/pages/authenticating-users?module_item_id=486270
+
+
 import React, { useState } from 'react';
 
 
 // export default function SignUp({ onLogin }: { onLogin: () => {} }) {
 export default function SignUp() {
     const onLogin = "";
-    const [username, setUsername] = useState("");
+    const [name, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     //https://www.kindacode.com/article/react-typescript-handling-form-onsubmit-event/
@@ -16,7 +19,7 @@ export default function SignUp() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                username,
+                name,
                 password,
                 password_confirmation: passwordConfirmation,
             }),
@@ -27,11 +30,12 @@ export default function SignUp() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1>Create an Account</h1>
             <label htmlFor="username">Username:</label>
             <input
                 type="text"
                 id="username"
-                value={username}
+                value={name}
                 onChange={(event) => setUsername(event.target.value)}
             />
             <label htmlFor="password">Password:</label>
