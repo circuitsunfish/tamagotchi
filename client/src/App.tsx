@@ -1,30 +1,26 @@
 import React from 'react';
 import { Dispatch, SetStateAction, useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
 
+const PlayOrAuth = ({ name }: { name: string }) => {
+  const history = useHistory();
+
+  if (name === "") {
+    history.push("/auth");
+  }
+  else {
+    history.push("/play");
+  }
+  return null;
+}
+
 function App() {
-  //testing stuff
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
-
-  //auth block
-  //TODO: move to /auth route; with Auth.tsx
-  const onLogin = "";
+  //username
   const [name, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
-
-
-
-
 
   return (
     <BrowserRouter>
@@ -32,15 +28,10 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Switch>
-            <Route path="/testing">
-              <h1>Test Route</h1>
-            </Route>
             <Route path="/auth">
               <Auth
                 name={name}
                 setUsername={setUsername}
-                password={password}
-                setPassword={setPassword}
               />
             </Route>
             <Route path="/selectcharacter">
@@ -50,7 +41,7 @@ function App() {
               <h1>play</h1>
             </Route>
             <Route path="/">
-              <h1>Page Count: {count}</h1>
+              <PlayOrAuth name={name} />
             </Route>
           </Switch>
         </header>

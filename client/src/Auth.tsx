@@ -6,12 +6,13 @@ type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
 type NavbarProps = {
     name: string
-    password: string
     setUsername: Dispatcher<string>
-    setPassword: Dispatcher<string>
 }
 
-export default function Navbar({ name, setUsername, password, setPassword }: NavbarProps) {
+export default function Navbar({ name, setUsername }: NavbarProps) {
+    const [password, setPassword] = useState("");
+    const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
 
     const [loginOrSignUp, setLoginOrSignUp] = useState(true);
 

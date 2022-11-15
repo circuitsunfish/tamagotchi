@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { BrowserRouter, useHistory } from 'react-router-dom';
 //https://stackoverflow.com/questions/56028635/passing-usestate-as-props-in-typescript
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
