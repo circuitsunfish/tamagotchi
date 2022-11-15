@@ -1,12 +1,13 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { Dispatch, SetStateAction, useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import SignUp from './SignUp';
+import Login from './Login';
 
 function App() {
-
+  //testing stuff
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -14,6 +15,15 @@ function App() {
       .then((r) => r.json())
       .then((data) => setCount(data.count));
   }, []);
+
+  //auth block
+  //TODO: move to /auth route; with Auth.tsx
+  const onLogin = "";
+  const [name, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
+
 
 
 
@@ -27,6 +37,10 @@ function App() {
               <h1>Test Route</h1>
             </Route>
             <Route path="/auth">
+              <Login
+                name={name}
+                password={password}
+              />
               <SignUp />
               {/* <SignUp onLogin={() => { }} /> */}
             </Route>
