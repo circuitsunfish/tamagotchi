@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import SignUp from './Login';
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
             </Route>
             <Route path="/auth">
               <h1>Login</h1>
+              <SignUp />
+              {/* <SignUp onLogin={() => { }} /> */}
             </Route>
             <Route path="/selectcharacter">
               <h1>selectcharacter</h1>
