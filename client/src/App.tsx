@@ -1,23 +1,30 @@
 import React from 'react';
 import { Dispatch, SetStateAction, useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
+import { useCookies } from 'react-cookie';
 import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
 
-const PlayOrAuth = ({ name }: { name: string }) => {
-  const history = useHistory();
 
-  if (name === "") {
-    history.push("/auth");
-  }
-  else {
-    history.push("/play");
-  }
-  return null;
-}
 
 function App() {
+  const history = useHistory();
+  console.log({ history })
+  //cookies
+  const [cookies, setCookie, removeCookie] = useCookies(['user_id']);
+  console.log({ cookies })
+
+  // const PlayOrAuth = (history) => {
+  //   if (name === "") {
+  //     history.push("/auth");
+  //   }
+  //   else {
+  //     history.push("/play");
+  //   }
+  //   return null;
+  // }
+
 
   //username
   const [name, setUsername] = useState("");
@@ -41,7 +48,7 @@ function App() {
               <h1>play</h1>
             </Route>
             <Route path="/">
-              <PlayOrAuth name={name} />
+              {/* {PlayOrAuth()} */}
             </Route>
           </Switch>
         </header>
