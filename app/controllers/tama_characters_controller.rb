@@ -18,6 +18,7 @@ class TamaCharactersController < ApplicationController
     @tama_character = TamaCharacter.new(tama_character_params)
 
     if @tama_character.save
+      PlayerOwnsTama.create(player_id: cookies['user_id'], tama_character_id: @tama_character.id, bio: "")
       render json: @tama_character, status: :created, location: @tama_character
     else
       render json: @tama_character.errors, status: :unprocessable_entity
