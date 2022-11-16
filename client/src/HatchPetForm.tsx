@@ -39,7 +39,7 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
                 value={petName}
                 onChange={(event) => setPetName(event.target.value)}
             />
-            <button type="submit">Summon An Egg</button>
+            <button type="submit">[Summon An Egg]</button>
         </form>
     );
 }
