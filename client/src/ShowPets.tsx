@@ -1,8 +1,23 @@
+import React, { useState } from "react";
 import { checkCookie } from "./CheckCookie";
 import { Link } from "react-router-dom";
+import HatchPetForm from "./HatchPetForm";
 
 
 export default function ShowPets() {
+
+    const [petName, setPetName] = useState("");
+
+    // let petName = "";
+    // let setPetName = () => { return null }
+
+    function createPetInfo() {
+
+    }
+
+
+
+
     if (checkCookie('user_id') === undefined) {
         return (
             <div>
@@ -11,13 +26,17 @@ export default function ShowPets() {
         )
     }
     else if (checkCookie('tama_character_id') === undefined) {
-        return (<p>u need to hatch a pet</p>)
+        return (<div>
+            <p>u need to hatch a pet</p>
+            <HatchPetForm
+                petName={petName}
+                setPetName={setPetName}
+            />
+        </div>
+        )
     }
     else {
         return (<p>here is where your pets would be. also u could hatch a pet</p>)
     }
 
-
-
-    return null;
 }
