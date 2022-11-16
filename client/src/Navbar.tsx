@@ -34,7 +34,10 @@ export default function Navbar() {
                     <li>
                         <Link to="#" onClick={() => handleLogout()}>Logout</Link>
                     </li>
-                    : null
+                    :
+                    <li>
+                        <Link to="/Auth"> Log In </Link>
+                    </li>
                 }
 
             </ul>

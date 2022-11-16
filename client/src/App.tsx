@@ -4,9 +4,10 @@ import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
-import Navbar from './Navbar';
-import Footer from './Footer';
 import { checkCookie } from './CheckCookie';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import ShowPets from './ShowPets';
 
 
 /**
@@ -50,7 +51,7 @@ function App() {
               <h1>selectcharacter</h1>
             </Route>
             <Route path="/play">
-              <h1>play</h1>
+              <ShowPets />
             </Route>
             <Route path="/">
               <PlayOrAuth />

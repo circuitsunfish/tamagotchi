@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
       end
 
       def destroy
+        #TODO: make sure you delete ALL the cookies from like pets and stuff
         #if u set both, u have to delete both >.>
         session.delete :user_id
         cookies.delete :user_id
