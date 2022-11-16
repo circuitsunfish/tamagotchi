@@ -8,36 +8,36 @@ export default function Navbar() {
 
     function handleLogout() {
         fetch("/logout", {
-            method: "DELETE",-
+            method: "DELETE",
         })
-    // .then(() => onLogout());
-}
+        // .then(() => onLogout());
+    }
 
 
 
-return (
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/account">Account</Link>
-            </li>
-            <li>
-                <Link to="/save">Save</Link>
-            </li>
-            <li>
-                <Link to="/tamas">Visit Pets</Link>
-            </li>
-            {checkCookie('user_id') !== undefined ?
+    return (
+        <nav>
+            <ul>
                 <li>
-                    <Link to="/logout">Logout</Link>
+                    <Link to="/">Home</Link>
                 </li>
-                : null
-            }
+                <li>
+                    <Link to="/account">Account</Link>
+                </li>
+                <li>
+                    <Link to="/save">Save</Link>
+                </li>
+                <li>
+                    <Link to="/tamas">Visit Pets</Link>
+                </li>
+                {checkCookie('user_id') !== undefined ?
+                    <li>
+                        <Link to="#" onClick={() => handleLogout()}>Logout</Link>
+                    </li>
+                    : null
+                }
 
-        </ul>
-    </nav>
-);
+            </ul>
+        </nav>
+    );
 }
