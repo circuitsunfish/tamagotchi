@@ -6,9 +6,16 @@ import './App.css';
 import Auth from './Auth'
 
 const PlayOrAuth = ({ name }: { name: string }) => {
+  //useHistory needs to be a child of <browserRouter>
   const history = useHistory();
 
-  if (name === "") {
+  //https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+  const cookieValue = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith('user_id'))
+    ?.split('=')[1];
+
+  if (cookieValue === undefined) {
     history.push("/auth");
   }
   else {
