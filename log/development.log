@@ -4761,3 +4761,79 @@ Processing by ApplicationController#hello_world as */*
 Completed 200 OK in 16ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 13391)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:39:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 23ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 13375)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:39:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 17ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 13375)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:45:32 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.9ms | Allocations: 330)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:45:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 19ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 13381)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:45:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 16ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 13379)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:45:57 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.8ms | Allocations: 330)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:45:57 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:46:40 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:48:09 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 326)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:48:13 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 334)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:48:15 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:48:31 -0500
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 338)
+
+
