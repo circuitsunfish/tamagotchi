@@ -12,15 +12,20 @@ export default function ShowPets() {
     // let petName = "";
     // let setPetName = () => { return null }
 
-    function gatherPetInfo() {
+    function gatherAllMyPetsInfo() {
 
         return fetch("/mypets")
             .then((response) => response.json())
             .then((response) => console.log(response.tama_character))
-        // .then((response) => console.log(response))
     }
 
-
+    const RenderPet = async () => {
+        let petID = checkCookie('tama_character_id');
+        const response = await fetch(`http://localhost:3000/tama_character/${petID}`);
+        const response_json = await response.json();
+        // return <p>{response_json}</p>;
+        return response_json.resolved ? response_json : null;
+    }
 
 
     if (checkCookie('user_id') === undefined) {
@@ -31,7 +36,7 @@ export default function ShowPets() {
         )
     }
     else if (checkCookie('tama_character_id') === undefined) {
-        gatherPetInfo();
+        gatherAllMyPetsInfo();
         return (<div>
             <p>u need to hatch a pet</p>
             <HatchPetForm
@@ -42,7 +47,11 @@ export default function ShowPets() {
         )
     }
     else {
-        return (<p>here is where your pets would be. also u could hatch a pet</p>)
+        return (<div>
+            {/* <p>here is where your pets would be. also u could hatch a pet</p> */}
+            {RenderPet()}
+
+        </div>)
     }
 
 }
