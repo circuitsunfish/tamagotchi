@@ -26,7 +26,7 @@ export default function Login({ name, setUsername, password, setPassword }: Logi
                 password: password
             }),
         })
-            .then((r) => r.json())
+            .then((response) => response.json())
             .then(() => {
                 setUsername(name)
                 history.push("/play");
