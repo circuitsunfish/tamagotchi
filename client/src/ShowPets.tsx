@@ -7,6 +7,7 @@ import HatchPetForm from "./HatchPetForm";
 export default function ShowPets() {
 
     const [petName, setPetName] = useState("");
+    const [myPets, setMyPets] = useState([]);
 
     // let petName = "";
     // let setPetName = () => { return null }
@@ -15,7 +16,8 @@ export default function ShowPets() {
 
         return fetch("/mypets")
             .then((response) => response.json())
-            .then((response) => console.log({ response }))
+            .then((response) => console.log(response.tama_character))
+        // .then((response) => console.log(response))
     }
 
 
