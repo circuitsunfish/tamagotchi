@@ -4250,3 +4250,23 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 283ms (Views: 4.7ms | ActiveRecord: 9.5ms | Allocations: 33725)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-11-16 09:50:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 13422)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-16 09:50:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/players" for 127.0.0.1 at 2022-11-16 09:50:51 -0500
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (2.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 7.3ms | Allocations: 18332)
+
+

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 #auth routes
 post "/signup", to: "users#create"
 post "/login", to: "sessions#create"
+delete "/logout", to: "sessions#destroy"
 
     # route to test your configuration
     get '/hello', to: 'application#hello_world'
