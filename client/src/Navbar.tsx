@@ -4,6 +4,16 @@ import { checkCookie } from "./CheckCookie";
 
 
 export default function Navbar() {
+
+
+    function handleLogout() {
+        fetch("/logout", {
+            method: "DELETE",
+        }).then(() => onLogout());
+    }
+
+
+
     return (
         <nav>
             <ul>
