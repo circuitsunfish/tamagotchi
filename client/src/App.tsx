@@ -5,7 +5,12 @@ import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
 
-const PlayOrAuth = ({ name }: { name: string }) => {
+
+/**
+ * If there is a valid cookie, then route the player to the game
+ * otherwise, the user must log in or create an account
+*/
+const PlayOrAuth = () => {
   //useHistory needs to be a child of <browserRouter>
   const history = useHistory();
 
@@ -48,7 +53,7 @@ function App() {
               <h1>play</h1>
             </Route>
             <Route path="/">
-              <PlayOrAuth name={name} />
+              <PlayOrAuth />
             </Route>
           </Switch>
         </header>
