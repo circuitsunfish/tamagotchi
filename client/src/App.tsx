@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 /**
@@ -60,6 +61,7 @@ function App() {
             </Route>
           </Switch>
         </header>
+        <Footer />
       </div>
     </BrowserRouter>
   );
