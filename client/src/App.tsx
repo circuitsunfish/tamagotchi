@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Auth from './Auth'
+import Navbar from './Navbar';
 
 
 /**
@@ -12,6 +13,7 @@ import Auth from './Auth'
 */
 const PlayOrAuth = () => {
   //useHistory needs to be a child of <browserRouter>
+  //https://stackoverflow.com/questions/62614433/react-router-why-is-the-usehistory-undefined-in-react
   const history = useHistory();
 
   //https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
@@ -39,6 +41,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <Navbar />
           <Switch>
             <Route path="/auth">
               <Auth
