@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { useHistory } from 'react-router-dom'
 
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
@@ -10,6 +11,13 @@ type HatchPetProps = {
 
 
 export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
+
+    const history = useHistory();
+
+    function onCreatePet() {
+        history.push("/play");
+    }
+
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         fetch("/tama_characters", {
@@ -26,7 +34,8 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
                 height: 4.0
             }),
         })
-            .then((response) => response.json());
+            .then((response) => response.json())
+            .then(() => onCreatePet());
     }
 
     return (

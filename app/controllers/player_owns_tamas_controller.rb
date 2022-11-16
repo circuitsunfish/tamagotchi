@@ -13,6 +13,12 @@ class PlayerOwnsTamasController < ApplicationController
     render json: @player_owns_tama
   end
 
+  # GET /mypets
+def mypets
+@player_owns_tamas = PlayerOwnsTama.find_by!(player_id: cookies[:user_id])
+render json: @player_owns_tamas
+end
+
   # POST /player_owns_tamas
   def create
     @player_owns_tama = PlayerOwnsTama.new(player_owns_tama_params)

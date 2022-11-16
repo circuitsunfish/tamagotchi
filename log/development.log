@@ -4274,3 +4274,54 @@ Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 7.3ms | Allocations: 183
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTamaCharacter Destroy (6.8ms)[0m  [1m[31mDELETE FROM "tama_characters" WHERE "tama_characters"."id" = $1[0m  [["id", 1]]
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/mypets" for 127.0.0.1 at 2022-11-16 15:32:05 -0500
+Started GET "/mypets" for 127.0.0.1 at 2022-11-16 15:32:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayerOwnsTamasController#mypets as */*
+Processing by PlayerOwnsTamasController#mypets as */*
+  [1m[36mPlayerOwnsTama Load (0.5ms)[0m  [1m[34mSELECT "player_owns_tamas".* FROM "player_owns_tamas" WHERE "player_owns_tamas"."player_id" = $1 LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  [1m[36mPlayerOwnsTama Load (0.7ms)[0m  [1m[34mSELECT "player_owns_tamas".* FROM "player_owns_tamas" WHERE "player_owns_tamas"."player_id" = $1 LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/player_owns_tamas_controller.rb:18:in `mypets'
+  ↳ app/controllers/player_owns_tamas_controller.rb:18:in `mypets'
+[active_model_serializers]   [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   [1m[36mTamaCharacter Load (1.1ms)[0m  [1m[34mSELECT "tama_characters".* FROM "tama_characters" WHERE "tama_characters"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTamaCharacter Load (1.1ms)[0m  [1m[34mSELECT "tama_characters".* FROM "tama_characters" WHERE "tama_characters"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers] Rendered PlayerOwnsTamaSerializer with ActiveModelSerializers::Adapter::Attributes (32.65ms)
+[active_model_serializers] Rendered PlayerOwnsTamaSerializer with ActiveModelSerializers::Adapter::Attributes (34.95ms)
+Completed 200 OK in 75ms (Views: 39.5ms | ActiveRecord: 15.6ms | Allocations: 71463)
+
+
+Completed 200 OK in 75ms (Views: 39.3ms | ActiveRecord: 15.7ms | Allocations: 71463)
+
+
+Started GET "/mypets" for 127.0.0.1 at 2022-11-16 15:32:44 -0500
+Started GET "/mypets" for 127.0.0.1 at 2022-11-16 15:32:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayerOwnsTamasController#mypets as */*
+Processing by PlayerOwnsTamasController#mypets as */*
+  [1m[36mPlayerOwnsTama Load (9.0ms)[0m  [1m[34mSELECT "player_owns_tamas".* FROM "player_owns_tamas" WHERE "player_owns_tamas"."player_id" = $1 LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/player_owns_tamas_controller.rb:18:in `mypets'
+  [1m[36mPlayerOwnsTama Load (0.8ms)[0m  [1m[34mSELECT "player_owns_tamas".* FROM "player_owns_tamas" WHERE "player_owns_tamas"."player_id" = $1 LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/player_owns_tamas_controller.rb:18:in `mypets'
+[active_model_serializers]   [1m[36mPlayer Load (2.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   [1m[36mPlayer Load (2.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   [1m[36mTamaCharacter Load (0.4ms)[0m  [1m[34mSELECT "tama_characters".* FROM "tama_characters" WHERE "tama_characters"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTamaCharacter Load (0.5ms)[0m  [1m[34mSELECT "tama_characters".* FROM "tama_characters" WHERE "tama_characters"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers]   ↳ app/controllers/player_owns_tamas_controller.rb:19:in `mypets'
+[active_model_serializers] Rendered PlayerOwnsTamaSerializer with ActiveModelSerializers::Adapter::Attributes (32.87ms)
+[active_model_serializers] Rendered PlayerOwnsTamaSerializer with ActiveModelSerializers::Adapter::Attributes (33.29ms)
+Completed 200 OK in 78ms (Views: 32.6ms | ActiveRecord: 25.4ms | Allocations: 77526)
+
+
+Completed 200 OK in 77ms (Views: 29.6ms | ActiveRecord: 16.0ms | Allocations: 77146)
+
+

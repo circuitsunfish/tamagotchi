@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :player_friends_tamas
   
   
+  #custom routes
+  get "/mypets", to: "player_owns_tamas#mypets"
   
   
   #auth routes

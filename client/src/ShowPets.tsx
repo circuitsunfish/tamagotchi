@@ -11,8 +11,11 @@ export default function ShowPets() {
     // let petName = "";
     // let setPetName = () => { return null }
 
-    function createPetInfo() {
+    function gatherPetInfo() {
 
+        return fetch("/mypets")
+            .then((response) => response.json())
+            .then((response) => console.log({ response }))
     }
 
 
@@ -26,6 +29,7 @@ export default function ShowPets() {
         )
     }
     else if (checkCookie('tama_character_id') === undefined) {
+        gatherPetInfo();
         return (<div>
             <p>u need to hatch a pet</p>
             <HatchPetForm
