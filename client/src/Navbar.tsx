@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { checkCookie } from "./CheckCookie";
 
 
 export default function Navbar() {
@@ -18,9 +19,12 @@ export default function Navbar() {
                 <li>
                     <Link to="/tamas">Visit Pets</Link>
                 </li>
-                <li>
-                    <Link to="/logout">Logout</Link>
-                </li>
+                {checkCookie('user_id') !== undefined ?
+                    <li>
+                        <Link to="/logout">Logout</Link>
+                    </li>
+                    : null
+                }
 
             </ul>
         </nav>

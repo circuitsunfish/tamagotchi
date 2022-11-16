@@ -6,6 +6,7 @@ import './App.css';
 import Auth from './Auth'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { checkCookie } from './CheckCookie';
 
 
 /**
@@ -16,12 +17,7 @@ const PlayOrAuth = () => {
   //useHistory needs to be a child of <browserRouter>
   //https://stackoverflow.com/questions/62614433/react-router-why-is-the-usehistory-undefined-in-react
   const history = useHistory();
-
-  //https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
-  const cookieValue = document.cookie
-    .split('; ')
-    .find((row) => row.startsWith('user_id'))
-    ?.split('=')[1];
+  const cookieValue = checkCookie('user_id');
 
   if (cookieValue === undefined) {
     history.push("/auth");
@@ -60,8 +56,8 @@ function App() {
               <PlayOrAuth />
             </Route>
           </Switch>
+          <Footer />
         </header>
-        <Footer />
       </div>
     </BrowserRouter>
   );
