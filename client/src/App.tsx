@@ -14,13 +14,13 @@ import ShowPets from './ShowPets';
  * If there is a valid cookie, then route the player to the game
  * otherwise, the user must log in or create an account
 */
-const PlayOrAuth = (history: History) => {
+const PlayOrAuth = () => {
   //useHistory needs to be a child of <browserRouter>
   //https://stackoverflow.com/questions/62614433/react-router-why-is-the-usehistory-undefined-in-react
 
   const cookieValue = checkCookie('user_id');
   //TODO: it's probably possible to use useEffect for this instead of cookies
-
+  const history = useHistory();
   if (cookieValue === undefined) {
     history.push("/auth");
   }
@@ -31,15 +31,9 @@ const PlayOrAuth = (history: History) => {
 }
 
 function App() {
-  const history = useHistory();
+
   //username
   const [name, setUsername] = useState("");
-
-
-  useEffect(() => {
-    PlayOrAuth(history);
-  }, [name])
-
 
   return (
     <BrowserRouter>
@@ -47,6 +41,7 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Navbar
+            name={name}
             setUsername={setUsername}
           />
           <Switch>
@@ -60,7 +55,9 @@ function App() {
               <h1>selectcharacter</h1>
             </Route>
             <Route path="/play">
-              <ShowPets />
+              <ShowPets
+                name={name}
+              />
             </Route>
             <Route path="/">
               <PlayOrAuth />

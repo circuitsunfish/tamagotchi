@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { checkCookie } from "./CheckCookie";
 import { useHistory } from "react-router-dom";
@@ -6,11 +6,11 @@ import { useHistory } from "react-router-dom";
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 
 type NavbarProps = {
+    name: string,
     setUsername: Dispatcher<string>
 }
 
-export default function Navbar({ setUsername }: NavbarProps) {
-
+export default function Navbar({ name, setUsername }: NavbarProps) {
     const history = useHistory();
 
     function handleLogout() {
@@ -32,11 +32,9 @@ export default function Navbar({ setUsername }: NavbarProps) {
                 <NavLink to="/account"><button className="p-2 hover:bg-slate-400">Account</button></NavLink>
                 <NavLink to="/save"><button className="p-2 hover:bg-slate-400">Save</button></NavLink>
                 <NavLink to="/tamas_character"><button className="p-2 hover:bg-slate-400">Visit Pets</button></NavLink>
-                {checkCookie('user_id') !== undefined ?
+                {name !== "" ?
                     <NavLink to="#" onClick={() => handleLogout()}><button className="p-2 hover:bg-slate-400">Logout</button></NavLink> :
-                    <NavLink to="/Auth"><button className="p-2 hover:bg-slate-400">Log In</button></NavLink>
-                }
-
+                    <NavLink to="/Auth"><button className="p-2 hover:bg-slate-400">Log In</button></NavLink>}
             </div>
         </nav>
     );

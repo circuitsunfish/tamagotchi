@@ -27,11 +27,22 @@ type PetInfo = {
 
 }
 
-export default function ShowPets() {
+type ShowPetsProps = {
+    name: string
+}
+
+export default function ShowPets({ name }: ShowPetsProps) {
 
     const [petName, setPetName] = useState("");
     const [myPets, setMyPets] = useState([] as PetInfo[]);
     const [selectedPet, setSelectedPet] = useState(0);
+
+    useEffect(() => {
+        let cookieValue = checkCookie('user_id')
+        if (cookieValue === undefined) {
+            document.location.href = '/auth'
+        }
+    }, [name])
 
 
     useEffect(() => {
@@ -67,7 +78,9 @@ export default function ShowPets() {
             { label: 'weight', value: myPets[selectedPet].tama_character.weight },
             { label: 'height', value: myPets[selectedPet].tama_character.height }
         ] : [];
-
+        if (myPets.length == 0) {
+            return null;
+        }
         return (<div>
             <p>
                 hello {myPets[selectedPet].player.name}
