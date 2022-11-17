@@ -74,11 +74,16 @@ export default function ShowPets() {
     }
     else {
         //data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
-        const barChartData = myPets.length > 0 ? [{ label: 'hunger', value: myPets[selectedPet].tama_character.hunger }, { label: 'attention', value: myPets[selectedPet].tama_character.attention }] : [];
+        const barChartData = myPets.length > 0 ? [
+            { label: 'hunger', value: myPets[selectedPet].tama_character.hunger },
+            { label: 'attention', value: myPets[selectedPet].tama_character.attention },
+            { label: 'weight', value: myPets[selectedPet].tama_character.weight },
+            { label: 'height', value: myPets[selectedPet].tama_character.height }
+        ] : [];
 
         return (<div>
             <p>
-                this is where the pet stats will be in a minute
+                this is your pet stats
             </p>
             <Bar
                 width={400}
@@ -86,15 +91,40 @@ export default function ShowPets() {
                 data={barChartData}
                 indexBy='label'
                 keys={['value']}
+                minValue={0}
+                maxValue={10}
+                groupMode="grouped"
+                layout="horizontal"
+                colors={{ scheme: "pastel1" }}
+                colorBy={"indexValue"}
+                labelTextColor="#aaaaaa"
+                theme={{ 'legends': { 'text': { 'fill': '#aaaaaa' } } }}
+                legends={[
+                    {
+                        dataFrom: 'indexes',
+                        anchor: 'bottom-right',
+                        direction: 'column',
+                        justify: false,
+                        itemsSpacing: 2,
+                        itemWidth: 100,
+                        itemHeight: 100,
+                        itemDirection: 'left-to-right',
+                        itemOpacity: 0.85,
+                        symbolSize: 20,
+                        effects: [
+                            {
+                                on: 'hover',
+                                style: {
+                                    itemOpacity: 1
+                                }
+                            }
+                        ]
+                    }
+                ]}
+                role="application"
+                ariaLabel="Nivo bar chart demo"
+                barAriaLabel={function (e) { return e.id + ": " + e.formattedValue + " in pet vital statistic: " + e.indexValue }}
             />
-            {/* <Bar
-                width={100}
-                height={100}
-                data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
-                indexBy='label'
-                keys={['hunger']}
-            /> */}
-
         </div>)
     }
 
