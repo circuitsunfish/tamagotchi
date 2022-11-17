@@ -73,6 +73,9 @@ export default function ShowPets() {
         )
     }
     else {
+        //data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
+        const barChartData = myPets.length > 0 ? [{ label: 'hunger', value: myPets[selectedPet].tama_character.hunger }, { label: 'attention', value: myPets[selectedPet].tama_character.attention }] : [];
+
         return (<div>
             <p>
                 this is where the pet stats will be in a minute
@@ -80,17 +83,17 @@ export default function ShowPets() {
             <Bar
                 width={400}
                 height={400}
-                data={[{ label: 'mypet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
+                data={barChartData}
                 indexBy='label'
-                keys={['hunger']}
+                keys={['value']}
             />
-            <Bar
+            {/* <Bar
                 width={100}
                 height={100}
                 data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
                 indexBy='label'
                 keys={['hunger']}
-            />
+            /> */}
 
         </div>)
     }
