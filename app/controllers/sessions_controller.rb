@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
         if user&.authenticate(params[:password])
           session[:user_id] = user.id
           cookies[:user_id] = user.id
+          cookies[:user_name] = user.name
           render json: user, status: :created
         else
           render json: { error: "Invalid username or password" }, status: :unauthorized
@@ -28,6 +29,7 @@ class SessionsController < ApplicationController
         #if u set both, u have to delete both >.>
         session.delete :user_id
         cookies.delete :user_id
+        cookies.delete :user_name
         cookies.delete :tama_character_id
         head :no_content
       end

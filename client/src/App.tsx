@@ -35,6 +35,11 @@ function App() {
   //username
   const [name, setUsername] = useState("");
 
+  useEffect(() => {
+    let cookieUser = checkCookie('user_name')
+    if (cookieUser != undefined) { setUsername(cookieUser) }
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="App">
