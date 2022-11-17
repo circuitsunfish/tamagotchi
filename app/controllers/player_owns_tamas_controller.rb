@@ -17,6 +17,7 @@ class PlayerOwnsTamasController < ApplicationController
 def mypets
 @player_owns_tamas = PlayerOwnsTama.find_by!(player_id: cookies[:user_id])
 cookies[:tama_character_id] = @player_owns_tamas.tama_character_id
+cookies[:tama_character_last_accessed] = @player_owns_tamas.updated_at
 render json: @player_owns_tamas
 end
 

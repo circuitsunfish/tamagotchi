@@ -34,11 +34,12 @@ function App() {
 
   //username
   const [name, setUsername] = useState("");
-
+  //TODO use a different piece of state for this that isn't the controlled form thing
   useEffect(() => {
     let cookieUser = checkCookie('user_name')
     if (cookieUser != undefined) { setUsername(cookieUser) }
   }, [])
+
 
   return (
     <BrowserRouter>

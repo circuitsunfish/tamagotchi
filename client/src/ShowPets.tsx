@@ -3,6 +3,7 @@ import { checkCookie } from "./CheckCookie";
 import { Link, useHistory } from "react-router-dom";
 import HatchPetForm from "./HatchPetForm";
 import { Bar } from "@nivo/bar";
+import { PetActionForm } from "./PetActionForm";
 
 
 //TODO: remove this after serializing out the digest
@@ -85,6 +86,7 @@ export default function ShowPets({ name }: ShowPetsProps) {
             <p>
                 hello {myPets[selectedPet].player.name}
             </p>
+            <PetActionForm myPets={myPets} selectedPet={selectedPet} />
             <p>
                 this is your pet {myPets[selectedPet].tama_character.name}'s stats
             </p>

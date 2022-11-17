@@ -31,6 +31,7 @@ class SessionsController < ApplicationController
         cookies.delete :user_id
         cookies.delete :user_name
         cookies.delete :tama_character_id
+        cookies.delete :tama_character_last_accessed
         head :no_content
       end
       
