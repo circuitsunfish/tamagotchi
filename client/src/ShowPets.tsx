@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { checkCookie } from "./CheckCookie";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import HatchPetForm from "./HatchPetForm";
 import { Bar } from "@nivo/bar";
 
