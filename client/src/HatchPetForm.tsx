@@ -17,6 +17,10 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
     function onCreatePet() {
         history.push("/play");
     }
+    function getNumber() {
+        // Returns a random integer from 1 to 10:
+        return Math.floor(Math.random() * 10) + 1;
+    }
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -27,11 +31,11 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
             },
             body: JSON.stringify({
                 name: petName,
-                hunger: 5,
+                hunger: getNumber(),
                 attention: 5,
                 sick: false,
-                weight: 2.0,
-                height: 4.0
+                weight: getNumber(),
+                height: getNumber()
             }),
         })
             .then((response) => response.json())
