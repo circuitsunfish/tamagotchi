@@ -19,7 +19,7 @@ const PlayOrAuth = () => {
   //https://stackoverflow.com/questions/62614433/react-router-why-is-the-usehistory-undefined-in-react
   const history = useHistory();
   const cookieValue = checkCookie('user_id');
-
+  //TODO: it's probably possible to use useEffect for this instead of cookies
   if (cookieValue === undefined) {
     history.push("/auth");
   }

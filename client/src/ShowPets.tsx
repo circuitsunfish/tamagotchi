@@ -18,7 +18,8 @@ export default function ShowPets() {
             .then((response) => response.json())
             .then((response) => console.log(response.tama_character))
     }
-
+    //TODO stop using cookies for this
+    //wrap gatherAllMyPetsInfo in useEffect and remove the cookies def in rails
     useEffect(() => {
         let petID = checkCookie('tama_character_id');
         fetch(`tama_characters/${petID}`)
