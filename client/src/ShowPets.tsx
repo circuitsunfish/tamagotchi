@@ -2,33 +2,42 @@ import React, { useEffect, useState } from "react";
 import { checkCookie } from "./CheckCookie";
 import { Link } from "react-router-dom";
 import HatchPetForm from "./HatchPetForm";
+import { Bar } from "@nivo/bar";
 
 
 export default function ShowPets() {
 
     const [petName, setPetName] = useState("");
     const [myPets, setMyPets] = useState([]);
+    const [selectedPet, setSelectedPet] = useState({});
 
-    // let petName = "";
-    // let setPetName = () => { return null }
 
-    function gatherAllMyPetsInfo() {
-
-        return fetch("/mypets")
-            .then((response) => response.json())
-            .then((response) => console.log(response.tama_character))
-    }
-    //TODO stop using cookies for this
-    //wrap gatherAllMyPetsInfo in useEffect and remove the cookies def in rails
     useEffect(() => {
-        let petID = checkCookie('tama_character_id');
-        fetch(`tama_characters/${petID}`)
+
+
+        fetch("/mypets")
             .then((response) => response.json())
-            .then((responseJson) => {
-                setMyPets([]);
-                setMyPets(responseJson)
-            })
+            .then((petInfo) => setMyPets(petInfo))
     }, [])
+
+    useEffect(() => {
+        setSelectedPet((cur) => {
+            let newSelectedPetData = Object.entries(myPets)[4]
+            return { ...cur, newSelectedPetData }
+        })
+    }, [myPets])
+
+    // stop using cookies for this
+    //wrap gatherAllMyPetsInfo in useEffect and remove the cookies def in rails
+    // useEffect(() => {
+    //     let petID = checkCookie('tama_character_id');
+    //     fetch(`tama_characters/${petID}`)
+    //         .then((response) => response.json())
+    //         .then((responseJson) => {
+    //             setMyPets([]);
+    //             setMyPets(responseJson)
+    //         })
+    // }, [])
 
 
 
@@ -50,7 +59,6 @@ export default function ShowPets() {
         )
     }
     else if (checkCookie('tama_character_id') === undefined) {
-        gatherAllMyPetsInfo();
         return (<div>
             <p>u need to hatch a pet</p>
             <HatchPetForm
@@ -63,8 +71,15 @@ export default function ShowPets() {
     else {
         return (<div>
             <p>
-                {Object.entries(myPets).toString()}
+                this is where the pet stats will be in a minute
             </p>
+            <Bar
+                width={400}
+                height={400}
+                data={[{ label: 'mypet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
+                indexBy='label'
+                keys={['hunger']}
+            />
 
         </div>)
     }
