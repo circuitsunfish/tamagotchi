@@ -45,14 +45,14 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
     return (
         <form onSubmit={handleSubmit}>
             <h1>Hatch A New Pet</h1>
-            <label htmlFor="petName">Speak a Name to Summon an Egg:</label>
+            <label htmlFor="petName" className='p-2'>Speak a Name to Summon an Egg:</label>
             <input
                 type="text"
                 id="petName"
                 value={petName}
                 onChange={(event) => setPetName(event.target.value)}
             />
-            <button type="submit">[Summon An Egg]</button>
+            <button type="submit"className='p-4 hover:bg-slate-400'>[Summon An Egg]</button>
         </form>
     );
 }
