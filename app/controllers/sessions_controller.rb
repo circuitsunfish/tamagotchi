@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
         #if u set both, u have to delete both >.>
         session.delete :user_id
         cookies.delete :user_id
+        cookies.delete :tama_character_id
         head :no_content
       end
       

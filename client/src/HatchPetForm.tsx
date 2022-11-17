@@ -15,7 +15,7 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
     const history = useHistory();
 
     function onCreatePet() {
-        history.push("/play");
+        history.push("/");
     }
     function getNumber() {
         // Returns a random integer from 1 to 10:

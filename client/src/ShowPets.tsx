@@ -42,19 +42,6 @@ export default function ShowPets() {
             .then((petInfo) => setMyPets([petInfo]))
     }, [])
 
-    // this is for later
-    // useEffect(() => {
-    //     if (myPets.length > 0) {
-    //         console.log({ myPets })
-    //         setSelectedPet((cur) => {
-    //             let newSelectedPetData = Object.entries(myPets[0])[4]
-    //             console.log({ newSelectedPetData })
-    //             return { ...cur, newSelectedPetData }
-    //         }
-    //         )
-    //     }
-    // }, [myPets])
-
     if (checkCookie('user_id') === undefined) {
         return (
             <div>
@@ -83,7 +70,10 @@ export default function ShowPets() {
 
         return (<div>
             <p>
-                this is your pet stats
+                hello {myPets[selectedPet].player.name}
+            </p>
+            <p>
+                this is your pet {myPets[selectedPet].tama_character.name}'s stats
             </p>
             <Bar
                 width={400}

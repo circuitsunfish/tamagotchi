@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { checkCookie } from "./CheckCookie";
+import { useHistory } from "react-router-dom";
 
 
 export default function Navbar() {
 
+    const history = useHistory();
 
     function handleLogout() {
         fetch("/logout", {
             method: "DELETE",
         })
-        // .then(() => onLogout());
+            .then(() => history.push('/'));
     }
 
 
