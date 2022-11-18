@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { checkCookie } from "./CheckCookie";
 import { Link, useHistory } from "react-router-dom";
 import HatchPetForm from "./HatchPetForm";
@@ -7,7 +7,7 @@ import { PetActionForm } from "./PetActionForm";
 
 
 //TODO: remove this after serializing out the digest
-type PetInfo = {
+export type PetInfo = {
     id: number
     bio: string
     relationship?: number
@@ -27,16 +27,23 @@ type PetInfo = {
     }
 
 }
+type Dispatcher<S> = Dispatch<SetStateAction<S>>;
+
 
 type ShowPetsProps = {
     name: string
+    myPets: PetInfo[]
+    setMyPets: Dispatcher<PetInfo[]>
 }
 
-export default function ShowPets({ name }: ShowPetsProps) {
+export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
 
     const [petName, setPetName] = useState("");
-    const [myPets, setMyPets] = useState([] as PetInfo[]);
     const [selectedPet, setSelectedPet] = useState(0);
+
+    const [hunger, setHunger] = useState(myPets[selectedPet].tama_character.hunger)
+    const [attention, setAttention] = useState(myPets[selectedPet].tama_character.attention)
+
 
     useEffect(() => {
         let cookieValue = checkCookie('user_id')
@@ -46,13 +53,6 @@ export default function ShowPets({ name }: ShowPetsProps) {
     }, [name])
 
 
-    useEffect(() => {
-
-
-        fetch("/mypets")
-            .then((response) => response.json())
-            .then((petInfo) => setMyPets([petInfo]))
-    }, [])
 
     if (checkCookie('user_id') === undefined) {
         return (
@@ -74,8 +74,8 @@ export default function ShowPets({ name }: ShowPetsProps) {
     else {
         //data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
         const barChartData = myPets.length > 0 ? [
-            { label: 'hunger', value: myPets[selectedPet].tama_character.hunger },
-            { label: 'attention', value: myPets[selectedPet].tama_character.attention },
+            { label: 'hunger', value: hunger },
+            { label: 'attention', value: attention },
             { label: 'weight', value: myPets[selectedPet].tama_character.weight },
             { label: 'height', value: myPets[selectedPet].tama_character.height }
         ] : [];
@@ -86,7 +86,14 @@ export default function ShowPets({ name }: ShowPetsProps) {
             <p>
                 hello {myPets[selectedPet].player.name}
             </p>
-            <PetActionForm myPets={myPets} selectedPet={selectedPet} />
+            <PetActionForm
+                myPets={myPets}
+                selectedPet={selectedPet}
+                hunger={hunger}
+                attention={attention}
+                setHunger={setHunger}
+                setAttention={setAttention}
+            />
             <p>
                 this is your pet {myPets[selectedPet].tama_character.name}'s stats
             </p>
