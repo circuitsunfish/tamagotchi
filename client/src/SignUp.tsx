@@ -71,7 +71,7 @@ export default function SignUp({ name, setUsername, password, setPassword }: Sig
                         />
                     </div>
                     <div>
-                        <button type="submit" className='hover:bg-slate-400'>Submit</button>
+                        <button type="submit" className='hover:bg-red-200 hover:scale-110'>Submit</button>
                     </div>
                 </div>
             </div>

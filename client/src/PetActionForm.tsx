@@ -126,10 +126,10 @@ export const PetActionForm = ({ myPets, selectedPet, hunger, setHunger, attentio
     return (
         <div className="display: flex; align-items: center; justify-content: center; p-10">
             <p>take care of your pet</p>
-            <NavLink to="#"><button className="p-2 hover:bg-slate-400 " onClick={() => handlePetActionClick(1)}>[Feed]</button></NavLink>
-            <NavLink to="#"><button className="p-2 hover:bg-slate-400 " onClick={() => handlePetActionClick(2)} >[Pay ATTENTION!!]</button></NavLink>
-            <NavLink to="#"><button className="p-2 hover:bg-slate-400 " onClick={() => handlePetActionClick(2)} >[Cuddles!]</button></NavLink>
-            <NavLink to="#"><button className="p-2 hover:bg-slate-400 " onClick={() => handlePetActionClick(2)} >[Play with me!]</button></NavLink>
+            <NavLink to="#"><button className="p-2 hover:bg-red-200 hover:scale-110 " onClick={() => handlePetActionClick(1)}>[Feed]</button></NavLink>
+            <NavLink to="#"><button className="p-2 hover:bg-red-200 hover:scale-110 " onClick={() => handlePetActionClick(2)} >[Pay ATTENTION!!]</button></NavLink>
+            <NavLink to="#"><button className="p-2 hover:bg-red-200 hover:scale-110 " onClick={() => handlePetActionClick(2)} >[Cuddles!]</button></NavLink>
+            <NavLink to="#"><button className="p-2 hover:bg-red-200 hover:scale-110 " onClick={() => handlePetActionClick(2)} >[Play with me!]</button></NavLink>
 
 
         </div>

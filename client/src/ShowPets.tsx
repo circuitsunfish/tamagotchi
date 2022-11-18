@@ -83,7 +83,7 @@ export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
         }
         return (<div>
             <p>
-                hello {myPets[selectedPet].player.name}
+                Hello {myPets[selectedPet].player.name}
             </p>
             <PetActionForm
                 myPets={myPets}
@@ -94,7 +94,7 @@ export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
                 setAttention={setAttention}
             />
             <p>
-                this is your pet {myPets[selectedPet].tama_character.name}'s stats
+                This is your pet {myPets[selectedPet].tama_character.name}'s stats
             </p>
             <Bar
                 width={400}
