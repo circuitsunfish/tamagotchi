@@ -55,7 +55,7 @@ export default function Login({ name, setUsername, password, setPassword }: Logi
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <button type="submit" className='p-4 hover:bg-slate-400'>Login</button>
+                <button type="submit" className='p-4 hover:bg-red-200 hover:scale-110'>Login</button>
             </div>
         </form>
     );

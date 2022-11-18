@@ -52,7 +52,7 @@ export default function HatchPetForm({ petName, setPetName }: HatchPetProps) {
                 value={petName}
                 onChange={(event) => setPetName(event.target.value)}
             />
-            <button type="submit"className='p-4 hover:bg-slate-400'>[Summon An Egg]</button>
+            <button type="submit"className='p-4 hover:bg-red-200 hover:scale-110'>[Summon An Egg]</button>
         </form>
     );
 }
