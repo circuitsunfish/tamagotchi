@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { checkCookie } from "./CheckCookie";
 import { Link, useHistory } from "react-router-dom";
 import HatchPetForm from "./HatchPetForm";
@@ -7,7 +7,7 @@ import { PetActionForm } from "./PetActionForm";
 
 
 //TODO: remove this after serializing out the digest
-type PetInfo = {
+export type PetInfo = {
     id: number
     bio: string
     relationship?: number
@@ -27,21 +27,22 @@ type PetInfo = {
     }
 
 }
+type Dispatcher<S> = Dispatch<SetStateAction<S>>;
+
 
 type ShowPetsProps = {
     name: string
+    myPets: PetInfo[]
+    setMyPets: Dispatcher<PetInfo[]>
 }
 
-export default function ShowPets({ name }: ShowPetsProps) {
+export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
 
     const [petName, setPetName] = useState("");
-    const [myPets, setMyPets] = useState([] as PetInfo[]);
     const [selectedPet, setSelectedPet] = useState(0);
 
-    // const [hunger, setHunger] = useState(null as number | null)
-    // const [attention, setAttention] = useState(null as number | null)
-    const [hunger, setHunger] = useState(0)
-    const [attention, setAttention] = useState(0)
+    const [hunger, setHunger] = useState(myPets[selectedPet].tama_character.hunger)
+    const [attention, setAttention] = useState(myPets[selectedPet].tama_character.attention)
 
 
     useEffect(() => {
@@ -52,17 +53,6 @@ export default function ShowPets({ name }: ShowPetsProps) {
     }, [name])
 
 
-    useEffect(() => {
-
-
-        fetch("/mypets")
-            .then((response) => response.json())
-            .then((petInfo) => setMyPets([petInfo]))
-            .then(() => {
-                setHunger(myPets[selectedPet].tama_character.hunger)
-                setAttention(myPets[selectedPet].tama_character.attention)
-            })
-    }, [])
 
     if (checkCookie('user_id') === undefined) {
         return (

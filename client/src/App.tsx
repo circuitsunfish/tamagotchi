@@ -7,7 +7,8 @@ import Auth from './Auth'
 import { checkCookie } from './CheckCookie';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import ShowPets from './ShowPets';
+import { ShowPetsFetcher } from './ShowPetsFetcher';
+
 
 
 /**
@@ -61,7 +62,7 @@ function App() {
               <h1>selectcharacter</h1>
             </Route>
             <Route path="/play">
-              <ShowPets
+              <ShowPetsFetcher
                 name={name}
               />
             </Route>
