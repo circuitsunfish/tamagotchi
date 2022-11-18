@@ -1,9 +1,12 @@
 /*screen color: #CFDDD4
 RGB: 207, 221, 212
 */
-
+body{
+  background-color: #282c34;
+}
 .App {
   text-align: center;
+  background: #282c34;
 }
 
 .App-logo {
@@ -11,11 +14,11 @@ RGB: 207, 221, 212
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -34,7 +37,7 @@ RGB: 207, 221, 212
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -42,4 +45,4 @@ RGB: 207, 221, 212
   to {
     transform: rotate(360deg);
   }
-}
+} */

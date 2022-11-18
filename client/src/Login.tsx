@@ -36,21 +36,27 @@ export default function Login({ name, setUsername, password, setPassword }: Logi
     return (
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
-            <label htmlFor="name">Player Username:</label>
-            <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(event) => setUsername(event.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
-            <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-            />
-            <button type="submit">Login</button>
+            <div>
+                <div className='p-4'>
+                    <label htmlFor="name" className='p-4'>Username:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={(event) => setUsername(event.target.value)}
+                    />
+                </div>
+                <div className='p-4'>
+                    <label htmlFor="password" className='p-4'>Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                    />
+                </div>
+                <button type="submit" className='p-4 hover:bg-slate-400'>Login</button>
+            </div>
         </form>
     );
 }

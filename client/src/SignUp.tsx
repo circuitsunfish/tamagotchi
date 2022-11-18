@@ -41,28 +41,40 @@ export default function SignUp({ name, setUsername, password, setPassword }: Sig
     return (
         <form onSubmit={handleSubmit}>
             <h1>Create an Account</h1>
-            <label htmlFor="username">Username:</label>
-            <input
-                type="text"
-                id="username"
-                value={name}
-                onChange={(event) => setUsername(event.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
-            <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-            />
-            <label htmlFor="password_confirmation">Confirm Password:</label>
-            <input
-                type="password"
-                id="password_confirmation"
-                value={passwordConfirmation}
-                onChange={(event) => setPasswordConfirmation(event.target.value)}
-            />
-            <button type="submit">Submit</button>
+            <div>
+                <div>
+                    <div className='p-4'>
+                        <label htmlFor="username">Username:</label>
+                        <input
+                            type="text"
+                            id="username"
+                            value={name}
+                            onChange={(event) => setUsername(event.target.value)}
+                        />
+                    </div>
+                    <div className='p-4'>
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(event) => setPassword(event.target.value)}
+                        />
+                    </div>
+                    <div className='p-4'>
+                        <label htmlFor="password_confirmation">Confirm Password:</label>
+                        <input
+                            type="password"
+                            id="password_confirmation"
+                            value={passwordConfirmation}
+                            onChange={(event) => setPasswordConfirmation(event.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <button type="submit" className='hover:bg-slate-400'>Submit</button>
+                    </div>
+                </div>
+            </div>
         </form>
     );
 }
