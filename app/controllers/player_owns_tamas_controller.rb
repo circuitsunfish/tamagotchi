@@ -35,6 +35,7 @@ end
   # PATCH/PUT /player_owns_tamas/1
   def update
     if @player_owns_tama.update(player_owns_tama_params)
+      cookies[:tama_character_last_accessed] = @player_owns_tamas.updated_at
       render json: @player_owns_tama
     else
       render json: @player_owns_tama.errors, status: :unprocessable_entity

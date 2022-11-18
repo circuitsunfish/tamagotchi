@@ -38,6 +38,12 @@ export default function ShowPets({ name }: ShowPetsProps) {
     const [myPets, setMyPets] = useState([] as PetInfo[]);
     const [selectedPet, setSelectedPet] = useState(0);
 
+    // const [hunger, setHunger] = useState(null as number | null)
+    // const [attention, setAttention] = useState(null as number | null)
+    const [hunger, setHunger] = useState(0)
+    const [attention, setAttention] = useState(0)
+
+
     useEffect(() => {
         let cookieValue = checkCookie('user_id')
         if (cookieValue === undefined) {
@@ -52,6 +58,10 @@ export default function ShowPets({ name }: ShowPetsProps) {
         fetch("/mypets")
             .then((response) => response.json())
             .then((petInfo) => setMyPets([petInfo]))
+            .then(() => {
+                setHunger(myPets[selectedPet].tama_character.hunger)
+                setAttention(myPets[selectedPet].tama_character.attention)
+            })
     }, [])
 
     if (checkCookie('user_id') === undefined) {
@@ -74,8 +84,8 @@ export default function ShowPets({ name }: ShowPetsProps) {
     else {
         //data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
         const barChartData = myPets.length > 0 ? [
-            { label: 'hunger', value: myPets[selectedPet].tama_character.hunger },
-            { label: 'attention', value: myPets[selectedPet].tama_character.attention },
+            { label: 'hunger', value: hunger },
+            { label: 'attention', value: attention },
             { label: 'weight', value: myPets[selectedPet].tama_character.weight },
             { label: 'height', value: myPets[selectedPet].tama_character.height }
         ] : [];
@@ -86,7 +96,14 @@ export default function ShowPets({ name }: ShowPetsProps) {
             <p>
                 hello {myPets[selectedPet].player.name}
             </p>
-            <PetActionForm myPets={myPets} selectedPet={selectedPet} />
+            <PetActionForm
+                myPets={myPets}
+                selectedPet={selectedPet}
+                hunger={hunger}
+                attention={attention}
+                setHunger={setHunger}
+                setAttention={setAttention}
+            />
             <p>
                 this is your pet {myPets[selectedPet].tama_character.name}'s stats
             </p>
