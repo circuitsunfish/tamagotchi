@@ -38,7 +38,6 @@ type ShowPetsProps = {
 
 export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
 
-    const [petName, setPetName] = useState("");
     const [selectedPet, setSelectedPet] = useState(0);
 
     const [hunger, setHunger] = useState(myPets[selectedPet].tama_character.hunger)
@@ -61,16 +60,16 @@ export default function ShowPets({ name, myPets, setMyPets }: ShowPetsProps) {
             </div>
         )
     }
-    else if (checkCookie('tama_character_id') === undefined) {
-        return (<div>
-            <p>u need to hatch a pet</p>
-            <HatchPetForm
-                petName={petName}
-                setPetName={setPetName}
-            />
-        </div>
-        )
-    }
+    // else if (!myPets || myPets[selectedPet].tama_character === undefined) {
+    //     return (<div>
+    //         <p>u need to hatch a pet</p>
+    //         <HatchPetForm
+    //             petName={petName}
+    //             setPetName={setPetName}
+    //         />
+    //     </div>
+    //     )
+    // }
     else {
         //data={[{ label: 'selectedPet', hunger: 4 }, { label: 'myotherpet', hunger: 6 }]}
         const barChartData = myPets.length > 0 ? [
